@@ -1,0 +1,966 @@
+@charset "utf-8";
+/* Layer Popup UI CSS */
+/* .pop-basic {
+  margin: 0;
+  box-sizing: border-box;
+  color: #595959;
+  font-weight: 400;
+  font-family: "Roboto", "맑은 고딕", sans-serif;
+  font-size: 12px;
+  position: absolute;
+  max-width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 3px rgb(0 0 0 / 30%);
+  pointer-events: none;
+  width: calc(100vw - 40px);
+  display: block;
+} */
+
+.hide {
+  display: none;
+}
+/* popup */
+
+.popupWrap {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup {
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10001;
+}
+
+.popup.alertPopup {
+  width: 360px;
+}
+
+.popup.listPopup {
+  width: 600px;
+}
+.popup input {
+  border: 1px solid #ccc;
+  height: 28px;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .popup.listPopup {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    min-width: 360px;
+  }
+}
+
+.popupHeader {
+  height: 20px;
+  margin: 2px;
+  padding: 16px;
+  margin-bottom: 32px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  color: #fff;
+  background-color: #00a1e9;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.popupTitle {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.popup .close,
+.contractClose,
+.popup .popupClose {
+  width: 18px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.popup .back {
+  position: absolute;
+  width: 18px;
+  left: 16px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.popupContainer {
+  padding: 0 40px;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.popupFooter {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+  font-size: 16px;
+}
+
+.popup button {
+  padding: 0 16px;
+  height: 32px;
+  color: #eee;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.popupFooter button a {
+  color: #fff;
+}
+
+.popupFooter button:first-child {
+  margin-right: 16px;
+}
+
+.confirmBtn,
+.btnActive {
+  background-color: #ff9243;
+}
+.cancelBtn,
+.btnDisable,
+.popupCancel {
+  background-color: darkgray;
+}
+.appBtn,
+.btnBlue {
+  background-color: #2196f3;
+  margin-right: 16px;
+}
+.blueBtn {
+  background-color: #2196f3;
+  font-size: 14px;
+}
+.btnRed {
+  background-color: red;
+}
+.btnStroke {
+  border: 1px solid #ff9243;
+  padding: 0 16px;
+  height: 32px;
+  font-size: 16px;
+  border: 1px solid #ff9243;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.popup .searchArea {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.searchArea input {
+  flex: 1;
+  margin-right: 8px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  background: url("./../_Img/PopupIcon/ico_search.svg") no-repeat;
+  background-position: 10px;
+  background-size: 5%;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.popup .listArea {
+  max-height: calc(100vh - 200px);
+  overflow-y: scroll;
+}
+.popup .listArea::-webkit-scrollbar {
+  width: 4px;
+}
+
+.popup .listArea::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.popup .listArea::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 10px;
+}
+.popup.listArea::-webkit-scrollbar-button {
+  display: none;
+}
+.listArea li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.listArea li.mainList {
+  justify-content: flex-start;
+  align-items: baseline;
+  border-bottom: none;
+  padding: 4px 0;
+}
+.listArea li.mainList:hover {
+  background-color: transparent;
+}
+
+.listArea li:hover {
+  background-color: #ffff99;
+}
+.listArea li .icon img {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.listArea .dec {
+  flex: 1;
+  text-align: left;
+  margin: 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dec .decTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dec .decSubTitle {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recoCode {
+  margin-top: 48px;
+}
+
+.recoCode input {
+  width: 100%;
+  height: 38px;
+  padding: 0 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.loginNextTitle {
+  font-weight: 500;
+  text-align: left;
+  text-indent: 8px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.termsText {
+  border-bottom: 1px dashed #333;
+}
+
+.terms {
+  margin: 30px 0;
+}
+.terms > div > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.termsCnt {
+  flex: 1;
+  text-align: left;
+  margin-left: 8px;
+}
+
+/* 구인상세 팝업 */
+.blueTxt {
+  color: #2196f3;
+  font-weight: 500;
+}
+
+.orangeTxt {
+  color: #eb6707;
+}
+
+.space {
+  letter-spacing: 24px;
+}
+
+.mainList .infoCnt {
+  flex: 1;
+  text-align: left;
+  margin-left: 8px;
+}
+
+.mainList .infoTitle {
+  width: 80px;
+  text-align: left;
+}
+
+/* 근로자 상세 팝업 */
+.userIcon img {
+  width: 24px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.listArea li.detailList {
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: none;
+  padding: 8px 16px;
+}
+
+.listArea li:hover {
+  background: rgba(92, 125, 238, 0.08);
+}
+
+.slash {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.popupContainer.detailContainer {
+  padding: 0px;
+}
+
+/* 체크박스 선택 시 버튼  */
+.btnWrap {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+}
+.btnWrap.active {
+  display: block;
+  animation: slider 1s;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btnWrap button {
+  width: 100%;
+  height: 56px;
+  border: none;
+}
+
+.btnWrap a {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.popup.datePopup {
+  width: 360px;
+}
+
+.popup.datePopup .popupContainer {
+  padding: 0 5px;
+}
+
+.dateBox {
+  display: inline-block;
+  width: 82px;
+  height: 45px;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+  border: 1px solid #ff9243;
+  cursor: pointer;
+}
+.dateBox.today.disabled {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dateBox p {
+  line-height: 45px;
+  font-size: 12px;
+}
+
+.dateBox.sunday p {
+  color: red;
+}
+
+.dateBox.today p {
+  color: #2196f3;
+}
+
+.dateBox.tomorrow p {
+  color: green;
+}
+
+.inputNum {
+  font-size: 18px;
+  border: none;
+  font-weight: 700;
+  color: #000;
+  width: 50px;
+  height: 50px;
+  text-align: inherit;
+}
+
+.btnBlack {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 100%;
+}
+
+#peopleNumPopup .popupFooter button {
+  margin: 0;
+}
+
+#payPopup .popupContainer {
+  padding: 0 20px;
+}
+
+#ratingPopup .textArea {
+  margin-top: 20px;
+}
+
+.starWrap {
+  margin: 10px 0;
+}
+
+.starR {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  text-shadow: 0 0 0 #f0f0f0;
+  font-size: 1.8em;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.starR:hover {
+  text-shadow: 0 0 0 #ccc;
+}
+
+.starR.on {
+  text-shadow: 0 0 0 #ffbc00;
+}
+
+#ratingPopup .textArea textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  resize: none;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+}
+
+#ratingPopup .decs {
+  font-size: 13px;
+  color: #555;
+  padding-top: 8px;
+  text-align: left;
+}
+
+.bankDecs {
+  text-align: left;
+}
+
+#bankPopup .popupContainer {
+  padding: 0 20px;
+}
+
+.bankList {
+  margin: 16px auto 0;
+  width: 300px;
+}
+.bankList li {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 4px;
+  background-color: pink;
+}
+
+.bankList li a {
+  display: inline-block;
+}
+
+.bankList li img {
+  width: 100%;
+}
+
+.containerTitle {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px;
+  text-align: left;
+  margin-top: -30px;
+  font-size: 14px;
+}
+
+#signPopup .containerTitle_1 {
+  margin: 12px 0;
+  text-align: left;
+  font-size: 12px;
+}
+
+.signArea {
+  border-radius: 10px;
+  border: 1px solid #555;
+  width: 100%;
+  height: 150px;
+  margin: 8px 0;
+}
+
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.signTitle {
+  font-size: 18px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.contractShow {
+  color: #2196f3;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.signAreaWrap .refreshBtn {
+  font-size: 12px;
+  border-radius: 24px;
+  background-color: #fff;
+  color: #000;
+  text-align: right;
+  border: 1px solid #555;
+  font-size: 12px;
+}
+
+.signAreaWrap > .btnArea {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.refreshBtn img {
+  width: 14px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+.signDecs {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.signDecs input {
+  margin-right: 4px;
+}
+
+#contractPopup .popupContainer {
+  padding: 0 10px;
+}
+
+.contractArea {
+  min-height: 490px;
+  width: 100%;
+  border: 1px solid #000;
+}
+#sharePopup .popupContainer {
+  padding: 0;
+}
+
+.shareList li {
+  display: inline-block;
+  width: 65px;
+  box-sizing: border-box;
+  margin: 7px;
+}
+
+.shareList li a {
+  display: inline-block;
+}
+
+.shareList li span {
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.shareList li img {
+  width: 50px;
+}
+
+.manageHeader {
+  text-align: center;
+  padding-bottom: 16px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.companyList .listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.companyContent {
+  border-bottom: 1px solid #eee;
+  max-height: calc(100vh - 200px);
+  overflow-y: scroll;
+}
+.companyContent::-webkit-scrollbar {
+  width: 4px;
+}
+
+.companyContent::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.companyContent::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 10px;
+}
+.companyContent::-webkit-scrollbar-button {
+  display: none;
+}
+.companyList .listDecs {
+  padding: 15px;
+  font-size: 14px;
+}
+
+#managePopup .popupFooter,
+#siteManagePopup .popupFooter,
+#managerPopup .popupFooter {
+  font-size: 13px;
+  padding: 16px;
+}
+
+#companyAuthPopup .popupFooter {
+  padding: 16px;
+}
+.manageHeader select {
+  width: 150px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #ccc;
+}
+
+.required {
+  color: #eb6707;
+  font-size: 12px;
+  vertical-align: top;
+  font-weight: 700;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.fileList p {
+  display: inline-block;
+}
+
+.fileList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 10px;
+}
+
+.fileList input {
+  width: 140px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  vertical-align: bottom;
+}
+
+.fileList input::placeholder {
+  font-size: 12px;
+}
+
+.fileList .btnBlue {
+  margin: 0;
+  font-size: 14px;
+}
+
+.attachDecs {
+  padding: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+#siteManagePopup button {
+  padding: 0 12px;
+  margin: 0;
+}
+
+.mapContent {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.mapList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 10px;
+}
+
+.mapList input {
+  width: 140px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  vertical-align: bottom;
+}
+
+.mapList input.input {
+  width: 160px;
+}
+
+.mapList input::placeholder {
+  font-size: 12px;
+}
+
+.mapList .btnBlue {
+  margin: 0;
+  font-size: 14px;
+}
+
+.listHeader .listNum {
+  display: flex;
+  align-items: center;
+}
+
+.listNum span.num {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.contentitle {
+  text-align: center;
+}
+.containerTitle_1 {
+  font-size: 13px;
+  text-align: left;
+}
+
+.passwordContent {
+  padding: 0 10px;
+}
+.pwdConfirmCnt {
+  padding: 0 20px;
+}
+.pwdInput {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.passwordContent label {
+  display: inline-block;
+}
+
+.pwdConfirmCnt input {
+  width: 180px;
+}
+
+.inputContent {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  margin: 16px 0;
+}
+
+.inputList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 10px;
+}
+
+.inputList p {
+  width: 96px;
+}
+.inputList + .orangeTxt {
+  padding: 4px 10px;
+}
+.inputList .input {
+  width: 180px;
+}
+
+.inputList > div {
+  display: flex;
+  align-items: center;
+}
+
+.inputList > div button {
+  margin-left: 4px;
+}
+.transContent {
+  margin-top: 16px;
+}
+.trasnFile {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.fileList button {
+  font-size: 14px;
+}
+
+.popupContainer.alertContent {
+  padding: 0 10px;
+}
+
+.notiContent {
+  padding: 0 10px;
+  margin-bottom: 32px;
+}
+.notiList > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.notiTitle {
+  width: 230px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notiList select {
+  width: 80px;
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid #ccc;
+}
+
+.textWrap {
+  width: 100%;
+  height: 50px;
+}
+
+.notiList .textArea {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: none;
+  padding: 10px;
+  background-color: #ffff99;
+  opacity: 0.7;
+}
+
+.notimark {
+  display: none;
+}
+
+.notimark.active {
+  display: inline-block;
+
+  color: #1170bd;
+  width: 12px;
+  border: 1px solid #1170bd;
+  height: 12px;
+  line-height: 12px;
+  font-size: 10px;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.appPopup {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 60px;
+  z-index: 3000;
+  background: #ccc;
+  border-radius: 18px;
+  text-align: center;
+  padding: 10px;
+}
+
+.appInstall {
+  background-color: #eb6707;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  margin-bottom: 8px;
+}
+
+.appInstall a {
+  color: #fff;
+}
+
+.appInstall img.logo {
+  width: 32px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.noneInstall {
+  font-size: 18px;
+  text-decoration: underline;
+  align-items: center;
+}
+
+.imgPopup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3000;
+}
+
+.imgPopup.remove {
+  display: none;
+}
+
+.imgPopupClose {
+  display: inline-block;
+  position: absolute;
+  right: 18px;
+  top: 13px;
+  cursor: pointer;
+}
+
+.imgPopupClose img {
+  width: 13px;
+  height: 13px;
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi"
+    />
+    <title>일가자</title>
+    <link
+      rel="icon"
+      href="./_Img/ilgaja.png"
+      mce_href="./_Img/ilgaja.png"
+      type="image/x-icon"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+      href="./_Css/common.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+      href="./_Css/styleDefault.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+      href="./_Css/layout.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+      href="./_Css/content.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+      href="./_Css/layer.popup.css"
+    />
+
+    <script type="text/javascript" src="./_Js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./_Js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./_Js/topmenu.js"></script>
+    <script type="text/javascript" src="./_Js/defalut.js"></script>
+    <script type="text/javascript" src="./_Js/common.js"></script>
+    <script type="text/javascript" src="./_Js/sub.js"></script>
+    <script type="text/javascript" src="./_Js/layer.popup.js"></script>
+  </head>
+  <body id="sub">
+    <div id="skipNavi">
+      <h1 class="blind">일가자 스킵네비게이션</h1>
+      <ul>
+        <li><a href="#contents" class="skipLink">본문바로가기</a></li>
+        <li><a href="#topmenu" class="skipLink">주메뉴바로가기</a></li>
+      </ul>
+    </div>
+    <!-- s: #doc //-->
+    <div id="doc" class="isPage">
+      <!-- s: .doc-pg //-->
+      <div id="pg-code" class="doc-pg">
+        <!-- s : header-wrap -->
+        <header id="header-wrap">
+          <div id="header" class="header">
+            <a href="javascript:history.back();" class="prev"
+              ><span class="blind">이전</span></a
+            >
+            <h2 class="tit">
+              <span
+                ><img
+                  src="./_Img/icon_logo.svg"
+                  alt="일가자 로고"
+                  class="icon_logo"
+                />회원정보입력</span
+              >
+            </h2>
+
+            <!-- s : mainNavi-wrap -->
+
+            <!-- e : mainNavi-wrap -->
+          </div>
+        </header>
+        <!-- e : header-wrap -->
+        <!-- s: #container-wrap //-->
+        <div id="container-wrap" class="scontainer">
+          <div id="contents">
+            <!-- page star // -->
+            <div class="key-wrap">
+              <p class="stit">
+                회원정보를<i class="block">정확히 입력하세요. </i>
+              </p>
+              <form name="wform" method="post" onSubmit="return post_check();">
+                <ul class="list">
+                  <li>
+                    <input
+                      type="text"
+                      placeholder="소속 회사 상호 (개인은 본인 이름)"
+                      class="select-gray pswd"
+                      onfocus="cngtype()"
+                      id="company"
+                      name="company"
+                      onblur="defaultText(this)"
+                      readonly
+                    /><span
+                      class="btn-search"
+                      onclick="openPop('pop-searchCorp')"
+                    ></span>
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      placeholder="이름 입력"
+                      class="select-gray pswd"
+                      onfocus="cngtype()"
+                      id="name"
+                      name="name"
+                      onblur="defaultText(this)"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      placeholder="비밀번호 입력(4자 이상, 영문, 숫자)"
+                      class="select-gray pswd"
+                      onfocus="cngtype()"
+                      id="pwd"
+                      name="pwd"
+                      onblur="defaultText(this)"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      placeholder="비밀번호 재입력"
+                      class="select-gray pswd2"
+                      onfocus="cngtype2()"
+                      id="pwd2"
+                      name="pwd2"
+                      onblur="defaultText(this)"
+                    />
+                  </li>
+                </ul>
+                <!-- <div class="sgap"></div> -->
+                <div class="recoCode">
+                  <p class="loginNextTitle">
+                    추천인코드를 입력하세요. (선택사항)
+                  </p>
+                  <input type="text" placeholder="추천인코드 (영문or 숫자)" />
+                </div>
+                <div class="terms">
+                  <p class="loginNextTitle termsText">
+                    약관을 읽고 모두 동의해 주세요.
+                  </p>
+                  <div>
+                    <div>
+                      <input type="checkbox" />
+                      <p class="termsCnt">서비스 이용 약관</p>
+                      <button class="btnStroke"><a href="#">보기</a></button>
+                    </div>
+                    <div>
+                      <input type="checkbox" />
+                      <p class="termsCnt">개인정보 수집 이용 및 제공 동의</p>
+                      <button class="btnStroke"><a href="#">보기</a></button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="login-btn"
+                  onclick="javascript:location.href='m_main.html'"
+                >
+                  <span>회원가입</span>
+                </button>
+              </form>
+            </div>
+            <!-- page end // -->
+          </div>
+        </div>
+        <!-- e: #container-wrap //-->
+        <!-- s : PC이용안내 layer //////////////////-->
+        <div class="pc-guide">
+          <h3>PC 이용안내</h3>
+          <a href="#n" class="close"><span class="blind">닫기</span></a>
+          <div class="is-con">
+            <a href="#" class="browser-btn">브라우저에서 새로 열기</a>
+          </div>
+        </div>
+        <!-- e: PC이용안내 layer //////////////////-->
+
+        <footer class="footer-wrap" id="footer-wrap">
+          <div id="footer">
+            <!-- 필요시 사용 -->
+          </div>
+        </footer>
+        <!-- layor popup -->
+        <div class="popupWrap hide">
+          <div class="popup listPopup hide" id="searchPopup">
+            <div class="popupHeader">
+              <p class="popupTitle">구인 회사</p>
+              <img
+                src="_Img/Layout/bt-mnall-close.png"
+                alt="close"
+                class="close"
+              />
+            </div>
+            <div class="popupContainer">
+              <div class="searchArea">
+                <input type="text" placeholder="회사 상호 입력(개인은 이름)" />
+                <button class="btnActive">검색</button>
+              </div>
+              <ul class="listArea">
+                <li>
+                  <div class="icon">
+                    <img src="_Img/PopupIcon/ico_building.png" alt="아이콘" />
+                  </div>
+                  <div class="dec">
+                    <p class="decTitle">국보디자인</p>
+                  </div>
+                  <div>
+                    <button class="btnActive">새로 추가</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="_Img/PopupIcon/ico_building2.png" alt="아이콘" />
+                  </div>
+                  <div class="dec">
+                    <p class="decTitle">국보디자인</p>
+                    <p class="decSubTitle">대표자 : OOO/서울특별시 마포구</p>
+                    <p class="decSubTitle">등록매니저 : OOO/010-1234-****</p>
+                  </div>
+                  <div>
+                    <button class="btnDisable">기존 추가</button>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img src="_Img/PopupIcon/ico_building2.png" alt="아이콘" />
+                  </div>
+                  <div class="dec">
+                    <p class="decTitle">국보디자인</p>
+                    <p class="decSubTitle">대표자 : OOO/서울특별시 마포구</p>
+                    <p class="decSubTitle">등록매니저 : OOO/010-1234-****</p>
+                  </div>
+                  <div>
+                    <button class="btnDisable">기존 추가</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //layor popup -->
+      </div>
+      <!-- e: .doc-pg //-->
+    </div>
+    <script type="text/javascript" src="./_Js/moment.min.js"></script>
+    <script type="text/javascript" src="./_Js/ion.calendar.js"></script>
+  </body>
+</html>
