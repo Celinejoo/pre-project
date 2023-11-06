@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/lib/jquery-3.6.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>도로결빙Monitoring</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="container">
+        <div class="titleContent">
+          <p class="title">도로결빙 MONITORING</p>
+          <div class="userInfo">
+            <p class="userName">
+              <img src="images/ico_user.png" alt="" />홍길동 님
+            </p>
+            <p class="time">접속시간 : 00:15:31</p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="top">
+            <div class="currentTime">
+              <img src="images/ico_clock.jpg" alt="clockIcon" />
+              <span class="txt">현재시각</span>
+              <span class="timeCnt">2023-04-18 PM 14:32</span>
+            </div>
+            <div class="topTitle">
+              <p>광주 북구 제 1 지점</p>
+            </div>
+            <div class="weather">
+              <span class="txt">현재날씨</span>
+              <img src="images/ico_weather_1.jpg" alt="weather" />
+            </div>
+          </div>
+          <div class="contentWrap">
+            <div class="left">
+              <div class="pointBox">
+                <p class="pointTitle">광주북부</p>
+                <div class="scroll">
+                  <p class="point pointActive">1지점</p>
+                  <p class="point">2지점</p>
+                  <p class="point">3지점</p>
+                  <p class="point">4지점</p>
+                  <p class="point">5지점</p>
+                </div>
+              </div>
+              <div class="totalBox">
+                <p class="totalTitle">총 설치 : 5개</p>
+                <div class="chartCnt">
+                  <p class="chartTitle">현재 상태 차트</p>
+                  <div class="listCnt">
+                    <div class="cnt">
+                      <p class="normal listColor">정상</p>
+                      <p class="num">3</p>
+                    </div>
+                    <div class="cnt">
+                      <p class="warning listColor">주의</p>
+                      <p class="num">1</p>
+                    </div>
+                    <div class="cnt">
+                      <p class="alert listColor">경보</p>
+                      <p class="num">1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chartCnt">
+                  <p class="chartTitle">주간 상태 차트</p>
+                  <div class="listCnt">
+                    <div class="cnt">
+                      <p class="normal listColor">정상</p>
+                      <p class="num">3</p>
+                    </div>
+                    <div class="cnt">
+                      <p class="warning listColor">주의</p>
+                      <p class="num">1</p>
+                    </div>
+                    <div class="cnt">
+                      <p class="alert listColor">경보</p>
+                      <p class="num">1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chartCnt">
+                  <p class="chartTitle">월간 상태 차트</p>
+                  <div class="listCnt">
+                    <div class="cnt">
+                      <p class="normal listColor">정상</p>
+                      <p class="num">3</p>
+                    </div>
+                    <div class="cnt">
+                      <p class="warning listColor">주의</p>
+                      <p class="num">1</p>
+                    </div>
+                    <div class="cnt">
+                      <p class="alert listColor">경보</p>
+                      <p class="num">1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="center">
+              <div class="graphWrap">
+                <div class="graph_v1">
+                  <div class="icon1">
+                    <img src="images/ico_tp_1.jpg" alt="tp1" />
+                    <p class="icTitle">노면온도 ℃</p>
+                    <p class="icInfo">-1</p>
+                  </div>
+                  <div class="icon2">
+                    <img src="images/ico_tp_2.jpg" alt="tp2" />
+                    <p class="icTitle">습도 ％</p>
+                    <p class="icInfo">54</p>
+                  </div>
+                  <div class="icon3">
+                    <img src="images/ico_tp_3.jpg" alt="tp3" />
+                    <p class="icTitle">기압 hPa</p>
+                    <p class="icInfo">700</p>
+                  </div>
+                </div>
+                <div class="graph_v2 graph">
+                  <p class="graphTitle">노면 온도 그래프</p>
+                  <div><img src="images/blueGraph.png" alt="blueGraph" /></div>
+                  <div class="graphTime">
+                    <p>11:00</p>
+                    <p>12:00</p>
+                    <p>13:00</p>
+                    <p>14:00</p>
+                    <p>15:00</p>
+                    <p>16:00</p>
+                  </div>
+                </div>
+                <div class="graph_v3 graph">
+                  <p class="graphTitle">습도 그래프</p>
+                  <div>
+                    <img src="images/orangeGraph.png" alt="orangeGraph" />
+                  </div>
+                  <div class="graphTime">
+                    <p>11:00</p>
+                    <p>12:00</p>
+                    <p>13:00</p>
+                    <p>14:00</p>
+                    <p>15:00</p>
+                    <p>16:00</p>
+                  </div>
+                </div>
+                <div class="graph_v4 graph">
+                  <p class="graphTitle">기압 그래프</p>
+                  <div>
+                    <img src="images/greenGraph.png " alt="greenGraph" />
+                  </div>
+                  <div class="graphTime">
+                    <p>11:00</p>
+                    <p>12:00</p>
+                    <p>13:00</p>
+                    <p>14:00</p>
+                    <p>15:00</p>
+                    <p>16:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mapWrap">
+                <div class="mapHeader">
+                  <p class="mapTitle">
+                    <img src="images/ico_map.png" alt="mapIcon" />광주 북구 전체
+                    지도
+                  </p>
+                </div>
+                <div class="mapCnt">
+                  <div class="mapImg">
+                    <img src="images/map.png" alt="map" />
+                  </div>
+                  <div class="detailCnt">
+                    <p class="detailTitle">광주 북구 1지점 상세내역</p>
+                    <div class="detailBox detailBox_v1">
+                      <div>
+                        <p class="infoTitle infoTitle_1">설치 지역 정보</p>
+                        <p class="info">광주광역시 북구 용봉동 123</p>
+                      </div>
+                      <div>
+                        <p class="infoTitle">설치일자</p>
+                        <p class="info">2021-01-01</p>
+                      </div>
+                      <div>
+                        <p class="infoTitle">제설장비</p>
+                        <p class="info">M-213004158</p>
+                      </div>
+                    </div>
+                    <div class="detailBox detailBox_v2">
+                      <div>
+                        <p class="infoTitle">통신상태</p>
+                        <p class="info active">양 호</p>
+                      </div>
+                      <div>
+                        <p class="infoTitle">설치내용</p>
+                        <p class="info">노면센서</p>
+                      </div>
+                      <div>
+                        <p class="infoTitle">점검일자</p>
+                        <p class="info">2023-03-20</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="tableWrap">
+                <div class="tableHeader">
+                  <p class="tableTitle">
+                    <img src="images/ico_jijum.jpg" alt="jijum" />광주 북구
+                    1지점
+                  </p>
+                  <p class="subTitle">실시간 데이터 그리드</p>
+                </div>
+                <div class="dateCnt">
+                  <p class="date">기간설정</p>
+                  <div>
+                    <input type="text" />
+                    <span>-</span>
+                    <input type="text" />
+                  </div>
+                  <button>
+                    <img src="images/ico_ex.png" alt="excel" />
+                    엑셀저장
+                  </button>
+                </div>
+                <div class="table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>시각</th>
+                        <th>온도</th>
+                        <th>습도</th>
+                        <th>기압</th>
+                        <th>상태</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>18:02</td>
+                        <td>-1</td>
+                        <td>62</td>
+                        <td>732</td>
+                        <td><span class="warningBtn">경고</span></td>
+                      </tr>
+                      <tr>
+                        <td>17:33</td>
+                        <td>3</td>
+                        <td>58</td>
+                        <td>740</td>
+                        <td><span class="alertBtn">주의</span></td>
+                      </tr>
+                      <tr>
+                        <td>17:02</td>
+                        <td>4</td>
+                        <td>56</td>
+                        <td>755</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>16:34</td>
+                        <td>4</td>
+                        <td>57</td>
+                        <td>756</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>16:20</td>
+                        <td>5</td>
+                        <td>57</td>
+                        <td>756</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>16:01</td>
+                        <td>4</td>
+                        <td>57</td>
+                        <td>732</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>15:45</td>
+                        <td>4</td>
+                        <td>59</td>
+                        <td>740</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>15:32</td>
+                        <td>4</td>
+                        <td>59</td>
+                        <td>755</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>15:22</td>
+                        <td>2</td>
+                        <td>54</td>
+                        <td>756</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>15:04</td>
+                        <td>2</td>
+                        <td>55</td>
+                        <td>732</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>14:43</td>
+                        <td>4</td>
+                        <td>55</td>
+                        <td>732</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>14:19</td>
+                        <td>2</td>
+                        <td>55</td>
+                        <td>740</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>13:50</td>
+                        <td>2</td>
+                        <td>58</td>
+                        <td>755</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>13:02</td>
+                        <td>3</td>
+                        <td>54</td>
+                        <td>756</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                      <tr>
+                        <td>12:40</td>
+                        <td>3</td>
+                        <td>58</td>
+                        <td>756</td>
+                        <td><span class="normalBtn">양호</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
