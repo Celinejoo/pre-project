@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <title>admin</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header" class="header">
+        <div class="hd-wrap">
+          <div class="logo"></div>
+          <div class="logout">
+            <a href="logout" class="log-text"><span>로그아웃</span></a>
+          </div>
+        </div>
+        <nav class="gnb">
+          <ul class="nav">
+            <li>
+              <a href="apply.html"><span>상담리스트</span></a>
+            </li>
+            <li>
+              <a href="error.html"><span>에러접수리스트</span></a>
+            </li>
+            <li class="active">
+              <a href="static.html"><span>상담통계</span></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="contatiner">
+        <div class="text-size">
+          <button class="small">가</button>
+          <button class="midum">가</button>
+          <button class="large">가</button>
+        </div>
+        <div class="content">
+          <h2 class="title">일별 상담집계</h2>
+          <form class="local_sch">
+            <div>
+              <strong>연령대</strong>
+              <input
+                type="radio"
+                name="sch_age"
+                value=""
+                id="sch_age_all"
+                checked="checked"
+              />
+              <label for="sch_age_all">전체</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_1120"
+                value="1120"
+              />
+              <label for="sch_age_1120">11~20세</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_2130"
+                value="2130"
+              />
+              <label for="sch_age_2130">21~30세</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_3140"
+                value="3140"
+              />
+              <label for="sch_age_3140">31~40세</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_4150"
+                value="4150"
+              />
+              <label for="sch_age_4150">41~50세</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_5160"
+                value="5160"
+              />
+              <label for="sch_age_5160">51~60세</label>
+              <input type="radio" name="sch_age" id="sch_age_60" value="60" />
+              <label for="sch_age_60">60세이상</label>
+            </div>
+            <div>
+              <strong>성별</strong>
+              <input
+                type="radio"
+                name="sch_sex"
+                value=""
+                id="sch_sex_all"
+                checked="checked"
+              />
+              <label for="sch_sex_all">전체</label>
+              <input type="radio" name="sch_sex" id="sch_sex_M" value="M" />
+              <label for="sch_sex_M">남성</label>
+              <input type="radio" name="sch_sex" id="sch_sex_F" value="F" />
+              <label for="sch_sex_F">여성</label>
+            </div>
+            <div>
+              <strong>기간별검색</strong>
+              <input
+                type="text"
+                id="fr_date"
+                name="fr_date"
+                value=""
+                class="frm_input hasDatepicker"
+                size="10"
+                maxlength="10"
+              />
+              ~
+              <input
+                type="text"
+                id="to_date"
+                name="to_date"
+                value=""
+                class="frm_input hasDatepicker"
+                size="10"
+                maxlength="10"
+              />
+              <button type="button">오늘</button>
+              <button type="button">어제</button>
+              <button type="button">이번주</button>
+              <button type="button">이번달</button>
+              <button type="button">지난주</button>
+              <button type="button">지난달</button
+              ><button type="button">전체</button>
+              <input type="submit" value="검색" class="btn_submit" />
+            </div>
+          </form>
+          <div class="btn_add">
+            <a href="" class="btn_excel">엑셀받기</a>
+          </div>
+          <div class="btn_list">
+            <button class="act_button hour">시간</button>
+            <button class="act_button dayofweek">요일</button>
+            <button class="act_button day">일</button>
+            <button class="act_button month">월</button>
+          </div>
+          <div class="tbl_wrap">
+            <table>
+              <caption>
+                일별 상담집계 목록
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">년-월-일</th>
+                  <th scope="col">kak1</th>
+                  <th scope="col">kak2</th>
+                  <th scope="col">kak3</th>
+                  <th scope="col">kak4</th>
+                  <th scope="col">kbd1</th>
+                  <th scope="col">kbd2</th>
+                  <th scope="col">kbd3</th>
+                  <th scope="col">kbks</th>
+                  <th scope="col">kbks2</th>
+                  <th scope="col">kbks3</th>
+                  <th scope="col">합계</th>
+                  <th scope="col">정상DB</th>
+                  <th scope="col">에러</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg1">
+                  <th>합계</th>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num">
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td class="td_num"><strong>0</strong></td>
+                  <td class="td_num"><strong>0</strong></td>
+                  <td class="td_num"><strong>0</strong></td>
+                </tr>
+                <tr>
+                  <td colspan="14" class="empty_table">자료가 없습니다.</td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td>합계</td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td>
+                    0<br />(<span class="cblue">0</span>/<span class="cred"
+                      >0</span
+                    >)
+                  </td>
+                  <td><strong>0</strong></td>
+                  <td><strong>0</strong></td>
+                  <td><strong>0</strong></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+      <footer id="ft">
+        <p>
+          Copyright © mediajjj.kr. All rights reserved. Version 5.2.9.5<br />
+          <a href="#">상단으로</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

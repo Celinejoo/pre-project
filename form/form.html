@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>admin</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <div class="content">
+          <form action="" class="form">
+            <div>
+              <label for="user_name">이름 <span>*</span></label>
+              <input
+                type="text"
+                name="user_name"
+                placeholder="이름을 적어주세요"
+                required=""
+              />
+            </div>
+            <div>
+              <label for="age">나이 <span>*</span></label>
+              <input
+                type="number"
+                name="age"
+                maxlength="2"
+                placeholder="나이를 적어주세요"
+                required=""
+              />
+            </div>
+            <div>
+              <label for="tel">연락처 <span>*</span></label>
+              <select name="전화번호1" style="background-color: #fff">
+                <option value="010">010</option>
+              </select>
+              <input type="tel" name="전화번호2" maxlength="4" required="" />
+              <input type="tel" name="전화번호3" maxlength="4" required="" />
+            </div>
+            <div>
+              <label for="성별">성별 <span>*</span></label>
+              <input
+                type="radio"
+                name="성별"
+                id="sex-f"
+                value="F"
+                required
+                checked
+              />
+              <label for="sex-f">여성</label>
+              <input type="radio" name="성별" id="sex-m" value="M" />
+              <label for="sex-m">남성</label>
+            </div>
+            <div>
+              <label for="age">문의사항 <span>*</span></label>
+              <input type="text" name="" required="" />
+            </div>
+            <div class="check-wrap">
+              <label>
+                <input type="checkbox" name="m_agree2" checked="" />
+                개인정보수집동의
+                <a href="#">(약관보기)</a>
+              </label>
+              <label>
+                <input type="checkbox" name="m_agree2" checked="" />
+                제3자 정보제공동의
+                <a href="#">(약관보기)</a>
+              </label>
+              <label>
+                <input type="checkbox" name="m_agree2" checked="" />
+                마케팅 정보수신동의
+                <a href="#">(약관보기)</a>
+              </label>
+              <label>
+                <input type="checkbox" name="m_agree2" checked="" />
+                개인정보 처리방침
+                <a href="#">(약관보기)</a>
+              </label>
+            </div>
+            <button class="btn-active">전송</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

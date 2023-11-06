@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+
+    <title>admin</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header" class="header">
+        <div class="hd-wrap">
+          <div class="logo"></div>
+          <div class="logout">
+            <a href="logout" class="log-text"><span>로그아웃</span></a>
+          </div>
+        </div>
+        <nav class="gnb">
+          <ul class="nav">
+            <li class="active">
+              <a href="apply.html"><span>상담리스트</span></a>
+            </li>
+            <li>
+              <a href="error.html"><span>에러접수리스트</span></a>
+            </li>
+            <li>
+              <a href="static.html"><span>상담통계</span></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="contatiner">
+        <div class="text-size">
+          <button class="small">가</button>
+          <button class="midum">가</button>
+          <button class="large">가</button>
+        </div>
+        <div class="content">
+          <h2 class="title">상담리스트</h2>
+          <div class="list-total">
+            <a href=""> 전체목록 </a>
+            <span class="">전체 34건</span>
+          </div>
+          <form class="local_sch02 local_sch">
+            <div>
+              <strong>연령대</strong>
+              <input
+                type="radio"
+                name="sch_age"
+                value=""
+                id="sch_age_all"
+                checked="checked"
+              />
+              <label for="sch_age_all">전체</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_1120"
+                value="1120"
+              />
+              <label for="sch_age_1120">11~20세</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_2130"
+                value="2130"
+              />
+              <label for="sch_age_2130">21~30세</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_3140"
+                value="3140"
+              />
+              <label for="sch_age_3140">31~40세</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_4150"
+                value="4150"
+              />
+              <label for="sch_age_4150">41~50세</label>
+              <input
+                type="radio"
+                name="sch_age"
+                id="sch_age_5160"
+                value="5160"
+              />
+              <label for="sch_age_5160">51~60세</label>
+              <input type="radio" name="sch_age" id="sch_age_60" value="60" />
+              <label for="sch_age_60">60세이상</label>
+            </div>
+            <div>
+              <strong>성별</strong>
+              <input
+                type="radio"
+                name="sch_sex"
+                value=""
+                id="sch_sex_all"
+                checked="checked"
+              />
+              <label for="sch_sex_all">전체</label>
+              <input type="radio" name="sch_sex" id="sch_sex_M" value="M" />
+              <label for="sch_sex_M">남성</label>
+              <input type="radio" name="sch_sex" id="sch_sex_F" value="F" />
+              <label for="sch_sex_F">여성</label>
+            </div>
+            <div>
+              <strong>처리상태</strong>
+              <input
+                type="radio"
+                name="sch_status"
+                value=""
+                id="sch_status_all"
+                checked="checked"
+              />
+              <label for="aa_status_all">전체</label>
+              <input
+                type="radio"
+                name="sch_status"
+                value="no"
+                id="sch_status_no"
+              />
+              <label for="sch_status_no">미선택</label>
+              <input
+                type="radio"
+                name="sch_status"
+                id="sch_status_CF"
+                value="CF"
+              />
+              <label for="sch_status_CF">상담완료</label>
+              <input
+                type="radio"
+                name="sch_status"
+                id="sch_status_B1"
+                value="B1"
+              />
+              <label for="sch_status_B1">부재1</label>
+              <input
+                type="radio"
+                name="sch_status"
+                id="sch_status_B2"
+                value="B2"
+              />
+              <label for="sch_status_B2">부재2</label>
+              <input
+                type="radio"
+                name="sch_status"
+                id="sch_status_B3"
+                value="B3"
+              />
+              <label for="sch_status_B3">부재3</label>
+              <input
+                type="radio"
+                name="sch_status"
+                id="sch_status_JD"
+                value="JD"
+              />
+              <label for="sch_status_JD">장난DB</label>
+              <input
+                type="radio"
+                name="sch_status"
+                id="sch_status_LS"
+                value="LS"
+              />
+              <label for="sch_status_LS">문자남김</label>
+            </div>
+
+            <div>
+              <strong>접수일자</strong>
+              <input
+                type="text"
+                id="fr_date"
+                name="fr_date"
+                value=""
+                class="frm_input hasDatepicker"
+                size="10"
+                maxlength="10"
+              />
+              ~
+              <input
+                type="text"
+                id="to_date"
+                name="to_date"
+                value=""
+                class="frm_input hasDatepicker"
+                size="10"
+                maxlength="10"
+              />
+              <button type="button">오늘</button>
+              <button type="button">어제</button>
+              <button type="button">이번주</button>
+              <button type="button">이번달</button>
+              <button type="button">지난주</button>
+              <button type="button">지난달</button
+              ><button type="button">전체</button>
+            </div>
+            <div>
+              <strong>시간대별</strong>
+              <select id="fr_time" name="fr_time" class="frm_input">
+                <option value="" selected="selected">전체</option>
+                <option value="01">01 시</option>
+                <option value="02">02 시</option>
+                <option value="03">03 시</option>
+                <option value="04">04 시</option>
+                <option value="05">05 시</option>
+                <option value="06">06 시</option>
+                <option value="07">07 시</option>
+                <option value="08">08 시</option>
+                <option value="09">09 시</option>
+                <option value="10">10 시</option>
+                <option value="11">11 시</option>
+                <option value="12">12 시</option>
+                <option value="13">13 시</option>
+                <option value="14">14 시</option>
+                <option value="15">15 시</option>
+                <option value="16">16 시</option>
+                <option value="17">17 시</option>
+                <option value="18">18 시</option>
+                <option value="19">19 시</option>
+                <option value="20">20 시</option>
+                <option value="21">21 시</option>
+                <option value="22">22 시</option>
+                <option value="23">23 시</option>
+              </select>
+              ~
+              <select id="to_time" name="to_time" class="frm_input">
+                <option value="" selected="selected">전체</option>
+                <option value="01">01 시</option>
+                <option value="02">02 시</option>
+                <option value="03">03 시</option>
+                <option value="04">04 시</option>
+                <option value="05">05 시</option>
+                <option value="06">06 시</option>
+                <option value="07">07 시</option>
+                <option value="08">08 시</option>
+                <option value="09">09 시</option>
+                <option value="10">10 시</option>
+                <option value="11">11 시</option>
+                <option value="12">12 시</option>
+                <option value="13">13 시</option>
+                <option value="14">14 시</option>
+                <option value="15">15 시</option>
+                <option value="16">16 시</option>
+                <option value="17">17 시</option>
+                <option value="18">18 시</option>
+                <option value="19">19 시</option>
+                <option value="20">20 시</option>
+                <option value="21">21 시</option>
+                <option value="22">22 시</option>
+                <option value="23">23 시</option>
+              </select>
+            </div>
+            <div class="sch_last">
+              <strong>검색</strong>
+              <label for="sch_caid" class="sound_only">광고주</label>
+              <select name="sch_caid" id="sch_caid" class="frm_input">
+                <option value="" selected="selected">
+                  ::: 광고주 전체 :::
+                </option>
+                <option value="kak1">kak1 (kak1)</option>
+                <option value="kak2">kak2 (kak2)</option>
+                <option value="kak3">kak3 (kak3)</option>
+                <option value="kak4">kak4 (kak4)</option>
+                <option value="kbd1">kbd1 (kbd1)</option>
+                <option value="kbd2">kbd2 (kbd2)</option>
+                <option value="kbd3">kbd3 (kbd3)</option>
+                <option value="kbks">kbks (kbks)</option>
+                <option value="kbks2">kbks2 (kbks2)</option>
+                <option value="kbks3">kbks3 (kbks3)</option>
+              </select>
+              <label for="sfl" class="sound_only">검색대상</label>
+              <select name="sfl" id="sfl" class="frm_input">
+                <option value="aa_name" selected="selected">고객명</option>
+                <option value="aa_tel">연락처</option>
+              </select>
+              <label for="stx" class="sound_only"
+                >검색어<strong class="sound_only"> 필수</strong></label
+              >
+              <input
+                type="text"
+                name="stx"
+                value=""
+                id="stx"
+                class="frm_input"
+                autocomplete="off"
+              />
+              <input type="submit" value="검색" class="btn_submit" />
+            </div>
+          </form>
+          <div class="btn_add">
+            <a href="" class="btn_excel">엑셀받기</a>
+          </div>
+          <div class="btn_list">
+            <button class="act_button">선택수정</button>
+            <button class="act_button">선택삭제</button>
+          </div>
+          <div class="tbl_wrap">
+            <table id="sodr_list">
+              <caption>
+                상담 내역 목록
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" rowspan="2">
+                    <label for="chkall" class="sound_only">상담 전체</label>
+                    <input
+                      type="checkbox"
+                      name="chkall"
+                      value="1"
+                      id="chkall"
+                    />
+                  </th>
+                  <th scope="col" rowspan="2">구분</th>
+                  <th scope="col">고객명</th>
+                  <th scope="col">나이</th>
+                  <th scope="col">발송타이틀</th>
+                  <th scope="col">접수시간</th>
+                  <th scope="col">처리여부</th>
+                  <th scope="col">체크1</th>
+                  <th scope="col">체크2</th>
+                  <th scope="col">체크3</th>
+                </tr>
+                <tr>
+                  <th scope="col">성별</th>
+                  <th scope="col">연락처</th>
+                  <th scope="col">광고주</th>
+                  <th scope="col">신청구분</th>
+                  <th scope="col">상담메모</th>
+                  <th scope="col" colspan="3">상담문의</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg0">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107952"
+                      id="aa_id_0"
+                    />
+                    <label for="chk_0" class="sound_only"
+                      >상담번호 107952</label
+                    >
+                    <input type="checkbox" name="chk[]" value="0" id="chk_0" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_0" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_0"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">김상미</td>
+                  <td class="td_numbig"></td>
+                  <td class="td_category">kbd2</td>
+                  <td class="td_category">2023-03-09 12:25:11</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_0" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+                <tr class="bg0">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-8261-2845</td>
+                  <td class="td_category">kbd2</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_0"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">-</td>
+                </tr>
+                <tr class="bg1">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107919"
+                      id="aa_id_1"
+                    />
+                    <label for="chk_1" class="sound_only"
+                      >상담번호 107919</label
+                    >
+                    <input type="checkbox" name="chk[]" value="1" id="chk_1" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_1" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_1"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">장민재</td>
+                  <td class="td_numbig"></td>
+                  <td class="td_category">kbks2</td>
+                  <td class="td_category">2023-03-07 19:13:25</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_1" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+                <tr class="bg1">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-4890-8664</td>
+                  <td class="td_category">kbks2</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_1"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">-</td>
+                </tr>
+                <tr class="bg0">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107865"
+                      id="aa_id_2"
+                    />
+                    <label for="chk_2" class="sound_only"
+                      >상담번호 107865</label
+                    >
+                    <input type="checkbox" name="chk[]" value="2" id="chk_2" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_2" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_2"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">서원수</td>
+                  <td class="td_numbig"></td>
+                  <td class="td_category">kbd1</td>
+                  <td class="td_category">2023-03-04 09:37:32</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_2" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg0">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-5552-0743</td>
+                  <td class="td_category">kbd1</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_2"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">-</td>
+                </tr>
+                <tr class="bg1">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107863"
+                      id="aa_id_3"
+                    />
+                    <label for="chk_3" class="sound_only"
+                      >상담번호 107863</label
+                    >
+                    <input type="checkbox" name="chk[]" value="3" id="chk_3" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_3" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_3"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">김동문</td>
+                  <td class="td_numbig">63 세</td>
+                  <td class="td_category">kbd1</td>
+                  <td class="td_category">2023-03-04 06:48:47</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_3" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg1">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-2352-2008</td>
+                  <td class="td_category">kbd1</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_3"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">가격문의</td>
+                </tr>
+                <tr class="bg0">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107854"
+                      id="aa_id_4"
+                    />
+                    <label for="chk_4" class="sound_only"
+                      >상담번호 107854</label
+                    >
+                    <input type="checkbox" name="chk[]" value="4" id="chk_4" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_4" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_4"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">고희문</td>
+                  <td class="td_numbig">65 세</td>
+                  <td class="td_category">kbd3</td>
+                  <td class="td_category">2023-03-03 06:36:55</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_4" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg0">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-6760-0745</td>
+                  <td class="td_category">kbd3</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_4"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">관절</td>
+                </tr>
+                <tr class="bg1">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107834"
+                      id="aa_id_5"
+                    />
+                    <label for="chk_5" class="sound_only"
+                      >상담번호 107834</label
+                    >
+                    <input type="checkbox" name="chk[]" value="5" id="chk_5" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_5" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_5"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">문차종</td>
+                  <td class="td_numbig">70 세</td>
+                  <td class="td_category">kbd3</td>
+                  <td class="td_category">2023-03-02 04:56:55</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_5" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg1">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-3315-4331</td>
+                  <td class="td_category">kbd3</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_5"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">
+                    무릎. 허리에장기치료되나요
+                  </td>
+                </tr>
+                <tr class="bg0">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107829"
+                      id="aa_id_6"
+                    />
+                    <label for="chk_6" class="sound_only"
+                      >상담번호 107829</label
+                    >
+                    <input type="checkbox" name="chk[]" value="6" id="chk_6" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_6" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_6"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">류미영</td>
+                  <td class="td_numbig">48 세</td>
+                  <td class="td_category">kbks2</td>
+                  <td class="td_category">2023-03-01 20:13:12</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_6" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg0">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-9992-4294</td>
+                  <td class="td_category">kbks2</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_6"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">가격얼마인가요</td>
+                </tr>
+                <tr class="bg1">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107817"
+                      id="aa_id_7"
+                    />
+                    <label for="chk_7" class="sound_only"
+                      >상담번호 107817</label
+                    >
+                    <input type="checkbox" name="chk[]" value="7" id="chk_7" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_7" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_7"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">명성애</td>
+                  <td class="td_numbig">63 세</td>
+                  <td class="td_category">kbks</td>
+                  <td class="td_category">2023-03-01 07:44:38</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_7" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg1">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-2765-2077</td>
+                  <td class="td_category">kbks</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_7"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">허리통증 손가락통증</td>
+                </tr>
+                <tr class="bg0">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107816"
+                      id="aa_id_8"
+                    />
+                    <label for="chk_8" class="sound_only"
+                      >상담번호 107816</label
+                    >
+                    <input type="checkbox" name="chk[]" value="8" id="chk_8" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_8" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_8"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">문의웅</td>
+                  <td class="td_numbig">84 세</td>
+                  <td class="td_category">kbks</td>
+                  <td class="td_category">2023-03-01 07:33:28</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_8" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg0">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-8916-5843</td>
+                  <td class="td_category">kbks</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_8"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">호리통증</td>
+                </tr>
+                <tr class="bg1">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107813"
+                      id="aa_id_9"
+                    />
+                    <label for="chk_9" class="sound_only"
+                      >상담번호 107813</label
+                    >
+                    <input type="checkbox" name="chk[]" value="9" id="chk_9" />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_9" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_9"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">고훈일</td>
+                  <td class="td_numbig">75 세</td>
+                  <td class="td_category">kbks</td>
+                  <td class="td_category">2023-03-01 06:41:43</td>
+                  <td class="txt_center">
+                    <select name="aa_status" id="aa_status_9" class="frm_input">
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg1">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-3691-3118</td>
+                  <td class="td_category">kbks</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_9"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">가격</td>
+                </tr>
+                <tr class="bg0">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107812"
+                      id="aa_id_10"
+                    />
+                    <label for="chk_10" class="sound_only"
+                      >상담번호 107812</label
+                    >
+                    <input
+                      type="checkbox"
+                      name="chk[]"
+                      value="10"
+                      id="chk_10"
+                    />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_10" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_10"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">최진수</td>
+                  <td class="td_numbig">65 세</td>
+                  <td class="td_category">kbks</td>
+                  <td class="td_category">2023-03-01 04:25:09</td>
+                  <td class="txt_center">
+                    <select
+                      name="aa_status"
+                      id="aa_status_10"
+                      class="frm_input"
+                    >
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg0">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-5397-6733</td>
+                  <td class="td_category">kbks</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_10"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">없음</td>
+                </tr>
+                <tr class="bg1">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107810"
+                      id="aa_id_11"
+                    />
+                    <label for="chk_11" class="sound_only"
+                      >상담번호 107810</label
+                    >
+                    <input
+                      type="checkbox"
+                      name="chk[]"
+                      value="11"
+                      id="chk_11"
+                    />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_11" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_11"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">이영래</td>
+                  <td class="td_numbig">88 세</td>
+                  <td class="td_category">kbd3</td>
+                  <td class="td_category">2023-03-01 00:52:58</td>
+                  <td class="txt_center">
+                    <select
+                      name="aa_status"
+                      id="aa_status_11"
+                      class="frm_input"
+                    >
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg1">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-3233-7068</td>
+                  <td class="td_category">kbd3</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_11"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">허리ㆍ다리 통증</td>
+                </tr>
+                <tr class="bg0">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107774"
+                      id="aa_id_12"
+                    />
+                    <label for="chk_12" class="sound_only"
+                      >상담번호 107774</label
+                    >
+                    <input
+                      type="checkbox"
+                      name="chk[]"
+                      value="12"
+                      id="chk_12"
+                    />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_12" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_12"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">황보덕</td>
+                  <td class="td_numbig">82 세</td>
+                  <td class="td_category">kbd2</td>
+                  <td class="td_category">2023-02-28 10:43:01</td>
+                  <td class="txt_center">
+                    <select
+                      name="aa_status"
+                      id="aa_status_12"
+                      class="frm_input"
+                    >
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg0">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-4305-2024</td>
+                  <td class="td_category">kbd2</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_12"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">최소가격</td>
+                </tr>
+                <tr class="bg1">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107735"
+                      id="aa_id_13"
+                    />
+                    <label for="chk_13" class="sound_only"
+                      >상담번호 107735</label
+                    >
+                    <input
+                      type="checkbox"
+                      name="chk[]"
+                      value="13"
+                      id="chk_13"
+                    />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_13" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_13"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">김정훈</td>
+                  <td class="td_numbig">42 세</td>
+                  <td class="td_category">kbd2</td>
+                  <td class="td_category">2023-02-28 07:13:05</td>
+                  <td class="txt_center">
+                    <select
+                      name="aa_status"
+                      id="aa_status_13"
+                      class="frm_input"
+                    >
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">Y</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+
+                <tr class="bg1">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-9546-4859</td>
+                  <td class="td_category">kbd2</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_13"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">-</td>
+                </tr>
+                <tr class="bg0">
+                  <td rowspan="2" class="td_chk">
+                    <input
+                      type="hidden"
+                      name="aa_id"
+                      value="107734"
+                      id="aa_id_14"
+                    />
+                    <label for="chk_14" class="sound_only"
+                      >상담번호 107734</label
+                    >
+                    <input
+                      type="checkbox"
+                      name="chk[]"
+                      value="14"
+                      id="chk_14"
+                    />
+                  </td>
+                  <td rowspan="2" class="td_mng">
+                    <label for="aa_flag_14" class="sound_only">구분</label>
+                    <select
+                      name="aa_flag"
+                      id="aa_flag_14"
+                      class="frm_input full_input"
+                    >
+                      <option value="G" selected="selected">정상</option>
+                      <option value="E">에러</option>
+                    </select>
+                  </td>
+                  <td class="td_ad_name">유무상</td>
+                  <td class="td_numbig">81 세</td>
+                  <td class="td_category">kbd3</td>
+                  <td class="td_category">2023-02-28 06:06:56</td>
+                  <td class="txt_center">
+                    <select
+                      name="aa_status"
+                      id="aa_status_14"
+                      class="frm_input"
+                    >
+                      <option value="" selected="selected">미선택</option>
+                      <option value="CF">상담완료</option>
+                      <option value="B1">부재1</option>
+                      <option value="B2">부재2</option>
+                      <option value="B3">부재3</option>
+                      <option value="JD">장난DB</option>
+                      <option value="LS">문자남김</option>
+                    </select>
+                  </td>
+                  <td class="td_category">on</td>
+                  <td class="td_category">외부결과 : 정상</td>
+                  <td class="td_category"></td>
+                </tr>
+                <tr class="bg0">
+                  <td class="td_ad_name">-</td>
+                  <td class="td_numbig">010-5259-0076</td>
+                  <td class="td_category">kbd3</td>
+                  <td class="td_category">모바일</td>
+                  <td class="txt_center">
+                    <input
+                      type="text"
+                      name="aa_memo"
+                      id="aa_memo_14"
+                      class="frm_input full_input"
+                      value=""
+                    />
+                  </td>
+                  <td colspan="3" class="txt_center">
+                    적추수술3회자임 효과가있을까요?
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn_list01 btn_list">
+            <button class="act_button">선택수정</button>
+            <button class="act_button">선택삭제</button>
+          </div>
+          <div class="tbl_frm01 tbl_wrap">
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">보낼 메일 주소</th>
+                  <td>
+                    <textarea
+                      name="apply_email_list"
+                      id="apply_email_list"
+                    ></textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn_confirm_wrap">
+            <button class="btn_confirm btn_submit">선택메일전송</button>
+          </div>
+        </div>
+        <div class="pg_wrap">
+          <span class="pg"
+            ><span class="sound_only">열린</span
+            ><strong class="pg_current">1</strong
+            ><span class="sound_only">페이지</span>
+            <a href="page2" class="pg_page"
+              >2<span class="sound_only">페이지</span></a
+            >
+            <a href="page3" class="pg_page"
+              >3<span class="sound_only">페이지</span></a
+            >
+            <a href="page3" class="pg_page pg_end">맨끝</a>
+          </span>
+        </div>
+      </div>
+      <footer id="ft">
+        <p>
+          Copyright © mediajjj.kr. All rights reserved. Version 5.2.9.5<br />
+          <a href="#">상단으로</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+.form {
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+input,
+select {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.form > div {
+  margin-bottom: 8px;
+}
+.form > div label {
+  display: inline-block;
+  width: 80px;
+  padding: 4px;
+}
+
+.form > div > input + label {
+  width: 35px;
+}
+.form input[type="text"],
+.form input[type="number"] {
+  height: 30px;
+  padding-left: 10px;
+  width: 80%;
+  border-radius: 4px;
+}
+
+.form input[type="tel"] {
+  height: 30px;
+  width: 26%;
+  padding-left: 10px;
+}
+
+.form select {
+  width: 20%;
+  height: 34px;
+  height: 35px;
+  vertical-align: middle;
+  padding: 1%;
+  font-size: 16px;
+}
+
+.form .check-wrap {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 14px;
+}
+.form .check-wrap label {
+  padding: 4px;
+  width: auto;
+}
+.form .check-wrap a {
+  color: #222;
+  vertical-align: baseline;
+}
+
+.btn-active {
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+  height: 46px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
