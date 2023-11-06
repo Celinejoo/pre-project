@@ -1,0 +1,395 @@
+body{
+    color:#333;
+    font-size: 16px;
+    width: 100%;
+    overflow-x: hidden;
+}
+:root {
+    --box1--view-width: 100%;
+    --box1--total-items-count: 7;
+    --box1--view-items-count: 4;
+    --box1--item-width: calc(var(--box1--view-width) / var(--box1--view-items-count));
+}
+
+.box1{
+    overflow: hidden;
+    width: var(--box1--view-width);
+}
+
+.infinite {
+    display: flex;
+    padding: 50px 0 ;
+    animation-name: ani-1;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.infinite li{   
+    flex-shrink: 1;
+    margin: 0 10px;
+    width: var(--box1--item-width);
+}
+
+.infinite li img{
+    width: 250px;
+    height: 250px;
+}
+
+
+.infinite:hover {
+    animation-play-state: paused;
+}
+
+@keyframes ani-1 {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(calc(var(--box1--item-width) * var(--box1--total-items-count) * -1));
+    }
+  }
+
+header{
+    height: 50px;
+    position: relative;
+    background-color: pink;
+}
+
+.hambuger {
+    display: inline-block;
+    position: absolute;
+    right:16px;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+nav{
+    display: none;
+    height: 100vh;
+    position: relative;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+nav.on{
+    display: block;
+    
+}
+
+nav .menu{
+    height: 20%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.section_01{
+    height: 350px;
+    background: #d9f3fc;
+}
+
+.textBox {
+    color:#333;
+    padding: 50px;
+}
+
+.textBox .title {
+    font-size: 28px;
+    color:#4fe8c4;
+    margin-bottom: 8px;
+    animation: textFade 0.5s ease-in-out;
+}
+
+.textBox .text1{
+    animation: textFade 0.7s ease-in-out;
+}
+
+.textBox .text2 {
+    animation: textFade 0.8s ease-in-out;
+}
+
+.textBox .text3 {
+    animation: textFade 1s ease-in-out;
+}
+
+@keyframes textFade {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.slideArea .imgArea img{
+    width:640px;
+    height: 480px;
+
+} 
+
+.slideArea .slick-prev{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.8);
+    left: 10px;
+    
+    z-index: 10;
+}
+
+.slideArea .slick-prev::before{
+    display: block;
+    content: "";
+    background: url("../images/icon/prev.png") no-repeat center center;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
+
+.slideArea .slick-next {
+    width:30px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.8);
+    right:670px;
+    z-index: 10;
+}
+.slideArea .slick-next::before{
+    display: block;
+    content: "";
+    background: url("../images/icon/next.png") no-repeat center center;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
+.slideArea .slick-slide{
+    display: flex;
+    align-items: center;
+}
+
+.slideArea .slideText {
+    padding: 50px;
+}
+
+.slideArea .slideText .slideTitle {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.slideArea .slideText .slideTitle+p{
+    color:#939393;
+}
+
+.section_03 {
+    padding: 50px 0;
+}
+.hoverList {
+    display: flex;
+    justify-content: center;
+}
+
+.hoverList li {
+    width: 200px;
+    padding: 30px;
+    text-align: center;
+    margin-right: 16px;
+    transition-duration: 0.3s;
+    transform: translateY(0);
+}
+
+.hoverList li:last-child{
+    margin-right: 0;
+}
+
+.hoverList li .listImg {    
+    padding: 40px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 8px;
+}
+
+.hoverList li:hover{
+    transform: translateY(-15px);
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.hoverList li.list:hover .listImg {
+    background-color:azure;
+   
+}
+
+.photoList ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.photoList li .photo img {
+    width: 300px;
+    height: 300px;
+}
+
+.popup{
+    display: block;
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 480px;
+    z-index: 60;
+    background-color: #fff;
+    border-radius: 8px;
+    
+}
+
+.popupWrap{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 50;
+    display: none;
+}
+.popupWrap.active {
+    display: block;
+}
+.popupWrap .popupHeader {
+    text-align: right;
+}
+
+.popupWrap .popupHeader img.close {
+    width: 24px;
+    height: 24px;
+    
+}
+.popupText{
+    padding: 50px;
+}
+ .popupText .popupTitle {
+    font-size:24px;
+    color:#333;
+    margin: 16px 0;
+
+}
+
+.popupWrap .popup img {
+    width: 480px;
+    height: 360px;
+    
+}
+
+.popupSlide .slick-list {
+    left: 0;
+    z-index: 10;
+}
+
+.popupSlide .slick-prev{
+    width: 24px;
+    height: 24px;
+    background-color: rgba(255,255,255,0.8);
+    left: 390px;
+    top:-13px;
+    z-index: 10;
+}
+
+.popupSlide .slick-prev::before{
+    display: block;
+    content: "";
+    background: url("../images/icon/prev.png") no-repeat center center;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+}
+
+
+.popupSlide .slick-next {
+    width:24px;
+    height: 24px;
+    background-color: rgba(255,255,255,0.8);
+    top:-13px;
+    right: 30px;
+    z-index: 10;
+}
+
+.popupSlide .slick-next::before{
+    display: block;
+    content: "";
+    background: url("../images/icon/next.png") no-repeat center center;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+}
+
+
+.section_07{
+    padding:50px 0;
+}
+
+.tab ul {
+    display: flex;
+    justify-content: center;
+}
+
+.tab .tabMenu {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tab .tabMenu.active{
+    font-weight: 700;
+    
+}
+.tab .tabMenu.active span{
+    border-bottom: 2px solid #333;
+}
+
+.content_01{
+    width: 100%;
+    height: 100%;  
+}
+
+.tabContent p.tabTitle {
+    margin:20px 0;
+    font-size: 18px;
+    font-weight: 500;    
+    padding:15px 180px;
+}
+
+.tabDecs {
+    font-size: 16px;
+    color:#666;
+    padding: 15px 180px;
+}
+
+.swiper-slide img {
+    display: block;
+    width:100%;
+    height: 400px;
+    object-fit:contain;
+}
+
+.tabContent {
+    display: none;
+}
+
+.tabContent.active{
+    display: block;
+}

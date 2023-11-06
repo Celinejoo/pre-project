@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="js/lib/slick/slick.css">
+    <link rel="stylesheet" href="js/lib/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/lib/jquery-3.6.1.min.js"></script>
+    <script src="js/lib/slick/slick.js"></script>
+    <script src="js/lib/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/lib/script.js"></script>
+    <title>크몽 의뢰</title>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div id="container" class="contatiner">
+            <div id="content" class="content">
+                <!-- header -->
+                <header class="header" id="header">
+                    <div class="hambuger">
+                        <img src="images/icon/menu.svg" alt="hambuger">
+                    </div>
+                    <!-- 
+                        처음엔 nav display:none 처리를 해줌. 
+                        햄버거 버튼을 클릭 하면 nav에 addClass on이 되면서 display:block 이 되도록 해줍니다. 
+                          -->
+                    <nav>
+                        <ul>
+                            <li class="menu close">close</li>
+                            <li class="menu">brandStory</li>
+                            <li class="menu">product</li>
+                            <li class="menu">store</li>
+                            <li class="menu">design</li>
+                        </ul>
+                    </nav>
+                </header>
+                <!-- //header -->
+                <!-- section_01 -->
+                <section class="section_01 videoArea">
+                    <!-- 
+                        애니메이션이 들어가야 하는 텍스트를 나눠서 마크업을 함.
+                        css로 각각 애니메이션을 적용함. 
+                        css 파일에 @keyframes 검색 
+                    -->
+                    <div class="textBox">
+                        <h3 class="title">GreenPeace</h3>
+                        <p class="text1">그린피스는 1971년 태어난 독립적인 국제환경단체로 </p>
+                        <p class="text2">지구 환경보호와 평화를 위해</p>
+                        <p class="text3">비폭력 직접행동의 평화적인 방식으로 캠페인을 전하고 있습니다.</p>
+                    </div>
+                </section>
+                <!-- section_01 -->
+                <!-- section_02 -->
+                <section class="section_02">
+                    <div class="slideArea">
+                        <div class="slide1">
+                            <div class="imgArea">
+                                <img src="images/img/imgSlide_01.jpg" alt="slide1">
+                            </div>
+                            <div class="slideText">
+                                <p class="slideTitle">첫번째 슬라이드의 제목</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Neque voluptate autem beatae voluptatum velit nemo 
+                                    architecto quae, placeat harum eaque a dolorum ex.
+                                     Sit nulla molestias eligendi ex dicta in.</p>
+                            </div>
+        
+                        </div>
+                        <div class="slide2">
+                            <div class="imgArea">
+                                <img src="images/img/imgSlide_02.jpg" alt="slide2">
+                            </div>
+                            <div class="slideText">
+                                <p class="slideTitle">두번째 슬라이드의 제목</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Neque voluptate autem beatae voluptatum velit nemo 
+                                    architecto quae, placeat harum eaque a dolorum ex.
+                                     Sit nulla molestias eligendi ex dicta in.</p>
+                            </div>
+                        </div>
+                        <div class="slide3">
+                            <div class="imgArea">
+                                <img src="images/img/imgSlide_03.jpg" alt="slide3">
+                            </div>
+                            <div class="slideText">
+                                <p class="slideTitle">세번째 슬라이드의 제목</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Neque voluptate autem beatae voluptatum velit nemo 
+                                    architecto quae, placeat harum eaque a dolorum ex.
+                                     Sit nulla molestias eligendi ex dicta in.</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+                </section>
+                <!-- //section_02 -->
+                <!-- section_03 -->
+                <!-- 마우스 hover 시 배경이 있어야 하는 영역을 나눠서 마크업
+                    hover 기능 css로 transform trannslat X,Y 로 조절 
+                -->
+                <section class="section_03">
+                    <ul class="hoverList">
+                        <li class="list">
+                            <div class="listImg">
+                                <img src="images/img/hoverImg_01.png" alt="img1">
+                            </div>
+                            <p>기사 읽고 공유하고</p>
+                        </li>
+                        <li class="list">
+                            <div class="listImg">
+                                <img src="images/img/hoverImg_02.png" alt="img1">
+                            </div>
+                            <p>돈도 벌고</p>
+                        </li>
+                        <li class="list">
+                            <div class="listImg">
+                                <img src="images/img/hoverImg_03.png" alt="img1">
+                            </div>
+                            <p>언론사 응원까지</p>
+                        </li>
+                    </ul>
+                </section>
+                <!-- //section_03 -->
+                <!-- section_04 -->
+                <!-- 마크업에 유의** 
+                    ul>li>div.photo + div.popup 으로 마크업                    
+                    .photo에 각각 이벤트를 주기보다는 for문을 사용해서 이벤트를 줌.
+                -->
+                <section class="section_04">
+                    <div class="photoList">
+                        <ul>
+                            <li>
+                                <div class="photo">
+                                    <img src="images/img/ice1.jpg" alt="">
+                                </div>
+                                <div class="popupWrap">
+                                    <div class="popup">
+                                        <div class="popupHeader">
+                                            <img src="icon/Close.png" alt="" class="close">
+                                        </div>
+                                        <div class="popupSlide">
+                                             <div class="popupImg">
+                                                 <img src="images/img/popupImg_01.jpg" alt="">
+                                             </div>
+                                             <div class="popupImg">
+                                                 <img src="images/img/popupImg_02.jpg" alt="">
+                                             </div>
+                                             <div class="popupImg">
+                                                 <img src="images/img/popupImg_03.jpg" alt="">
+                                             </div>
+                                             
+                                        </div>
+                                        <div class="popupText">
+                                            <p class="popupTitle">팝업의 텍스트 내용</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                                                elit. Molestias facere iure non qui, odio inventore 
+                                                voluptas, quod nam cupiditate dolor optio at delectus
+                                                 laborum! 
+                                                Nisi nulla eos reiciendis facilis fugit.</p>
+                                        </div>
+                                     </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="photo">
+                                    <img src="images/img/ice6.jpg" alt="">
+                                </div>
+                                <div class="popupWrap">
+                                    <div class="popup">
+                                        <div class="popupHeader">
+                                            <img src="icon/Close.png" alt="" class="close">
+                                        </div>
+                                        <div class="popupSlide">
+                                             <div class="popupImg">
+                                                 <img src="images/img/popupImg_01.jpg" alt="">
+                                             </div>
+                                             <div class="popupImg">
+                                                 <img src="images/img/popupImg_02.jpg" alt="">
+                                             </div>
+                                             <div class="popupImg">
+                                                 <img src="images/img/popupImg_03.jpg" alt="">
+                                             </div>
+                                             
+                                        </div>
+                                        <div class="popupText">
+                                            <p class="popupTitle">두번째 팝업의 텍스트 내용</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+                                                elit. Molestias facere iure non qui, odio inventore 
+                                                voluptas, quod nam cupiditate dolor optio at delectus
+                                                 laborum! 
+                                                Nisi nulla eos reiciendis facilis fugit.</p>
+                                        </div>
+                                     </div>
+                                </div>       
+                            </li>
+                            <li>
+                                <div class="photo">
+                                    <img src="images/img/ice2.jpg" alt="">
+                                </div>    
+                            </li>
+                            <li>
+                                <div class="photo">
+                                    <img src="images/img/ice3.jpg" alt="">
+                                </div> 
+                            </li>
+                            <li>
+                                <div class="photo"> 
+                                    <img src="images/img/ice4.jpg" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="photo">
+                                    <img src="images/img/ice5.jpg" alt="">
+                                </div>         
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- //section_04 -->
+                <!-- section_05 -->
+                <section class="section_05">
+
+                </section>
+                <!-- //section_05 -->
+                <!-- section_06 -->
+                <section class="section_06">
+                    <div class="box1">
+                        <ul class="infinite">
+                            <li>
+                                <img src="images/img/infinite_01.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_02.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_03.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_04.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_05.jpg" alt="">
+                            </li> 
+                            <li>
+                                <img src="images/img/infinite_06.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_07.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_01.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_02.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_03.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_04.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_05.jpg" alt="">
+                            </li> 
+                            <li>
+                                <img src="images/img/infinite_06.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_07.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_01.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_02.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_03.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_04.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_05.jpg" alt="">
+                            </li> 
+                            <li>
+                                <img src="images/img/infinite_06.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/img/infinite_07.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </section>
+                <!-- //section_06 -->
+                <!-- section_07 -->
+                <section class="section_07">
+                    <div class="tab">
+                        <ul>
+                            <li class="tabMenu tabMenu1 active"><span>탭메뉴1</span></li>
+                            <li class="tabMenu tabMenu2"><span>탭메뉴2</span></li>
+                            <li class="tabMenu tabMenu3"><span>탭메뉴3</span></li>
+                        </ul>
+                    </div>
+                    <div class="tabContent content_01 active">
+                        <p class="tabTitle">탭메뉴의 타이틀1</p>
+                        <p class="tabDecs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio error qui, quidem quas, consectetur quae ducimus minus a, quia maiores officia dicta magni voluptates molestias similique inventore enim sed. Non?</p>
+                        <div>
+                            <div class="content_1 swiperContent swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice4.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabContent content_02">
+                        <p class="tabTitle">탭메뉴의 타이틀2222</p>
+                        <p class="tabDecs"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aperiam dignissimos eum vitae vel non tempore natus ea iusto, quod quo reiciendis temporibus assumenda dolores labore consequatur nihil fugit provident!</p>
+                        <div>
+                            <div class="swiperContent swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice4.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabContent content_03">
+                        <p class="tabTitle">탭메뉴의 타이틀3333</p>
+                        <p class="tabDecs"t>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio maiores delectus ipsa temporibus nobis ab esse officiis, explicabo ratione cum sed. Doloremque aliquam ab vero libero, id quasi officia.</p>
+                        <div>
+                            <div class="swiperContent swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/img/ice4.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- //section_07 -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
