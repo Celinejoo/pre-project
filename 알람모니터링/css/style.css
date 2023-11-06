@@ -1,0 +1,442 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Pretendard";
+  font-weight: 400;
+  color: #000;
+  line-height: 1.5;
+  letter-spacing: -0.9px;
+}
+
+#wrap {
+  font-family: "Pretendard";
+  font-weight: 400;
+  color: #000;
+  line-height: 1.5;
+  letter-spacing: -0.9px;
+}
+header {
+  height: 74px;
+  background: #1e1e2d;
+
+  font-size: 18px;
+  color: #fff;
+  /* padding: 0 110px; */
+}
+
+.headerInner {
+  width: 88.5%;
+  margin: 0 auto;
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .nav-link {
+  color: #fff;
+  padding-left: 50px;
+  padding-right: 28px;
+  line-height: 58px;
+}
+
+.nav .nav-link span {
+  padding: 0 9px 0 7px;
+  box-sizing: border-box;
+}
+.profile {
+  padding-right: 16px;
+}
+
+.profile > div {
+  width: 32px;
+  height: 32px;
+
+  background-color: #f1f1f1;
+  border-radius: 100%;
+  position: relative;
+}
+
+.profile > div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.subHeader {
+  height: 40px;
+  display: flex;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 155px;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  font-size: 13px;
+  color: #5d5d5d;
+}
+
+.subHeader > div {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  position: relative;
+}
+.subHeader > div::after {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #d7d7d7;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -12px;
+}
+
+.subHeader > div:last-of-type::after {
+  display: none;
+}
+
+.subHeader p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.subHeader input {
+  margin: 0 6px;
+}
+
+.settingTitle {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-right: 17px;
+}
+
+.unit {
+  color: #222;
+}
+
+.num {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid #f4f4f4;
+  padding-right: 8px;
+  text-align: right;
+  margin: 0 3px 0 14px;
+}
+
+#content {
+  padding: 0 110px;
+  background-color: #f4f4f4;
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.titleBox .title {
+  font-size: 20px;
+  margin-right: 25px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.titleBox .selectBox {
+  width: 147px;
+  height: 34px;
+  color: #000;
+  font-size: 18px;
+  border-color: #d7d7d7;
+  padding-top: 2px;
+}
+
+.list,
+.form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.03);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  box-sizing: border-box;
+  width: 1700px;
+  margin: 0 auto 40px;
+  height: 90px;
+}
+
+.form > div {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+.form > div.btnWrap {
+  margin-right: 0;
+}
+
+.form > div p {
+  font-size: 18px;
+  margin-right: 18px;
+  margin-bottom: 0;
+}
+
+.form > div p.alarmDate {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.form > div p.divide {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.btn.btnSearch {
+  box-sizing: border-box;
+  background-color: #e1e7fc;
+  font-size: 15px;
+  color: #3762ea;
+  border: none;
+}
+
+.form .btn.btnSearch:hover,
+.form .btn.btnSearch:active {
+  background-color: #e1e7fc;
+  color: #3762ea;
+}
+
+.form > div.btnWrap .btn.btnSearch {
+  margin-right: 10px;
+}
+
+.table .btn.btnSave {
+  box-sizing: border-box;
+  background-color: #e1e7fc;
+  font-size: 15px;
+  color: #3762ea;
+  border: none;
+}
+
+.table .btn.btnSave:hover,
+.table .btn.btnSearch:active {
+  background-color: #e1e7fc;
+  color: #3762ea;
+}
+
+.btn.btnSearch img {
+  padding-right: 4px;
+}
+
+.btn.btnDown img {
+  padding-right: 4px;
+}
+.btn.btnSave img {
+  padding-right: 4px;
+}
+.btn.btnDown {
+  box-sizing: border-box;
+  background-color: #e8eaec;
+  font-size: 15px;
+  color: #000;
+  border: none;
+}
+
+.form .btn.btnDown:hover,
+.form .btn.btnDown:active {
+  background-color: #e8eaec;
+  color: #000;
+}
+
+.form .form-select.system {
+  width: 135px;
+  padding-left: 18px;
+}
+
+.form .form-select {
+  width: 162px;
+  height: 30px;
+  color: #555;
+  font-size: 16px;
+  border-color: #d7d7d7;
+  padding-left: 30px;
+  padding-top: 2px;
+}
+
+.form input[type="checkbox"] {
+  margin-top: 0;
+}
+
+.form input[type="text"] {
+  width: 152px;
+  height: 26px;
+  margin: 0 11px;
+  border: none;
+  font-size: 15px;
+  padding-left: 24px;
+  padding-right: 8px;
+  border-radius: 2px;
+  background: url("../img/iccalendar.png") no-repeat 4% center #eff2f7;
+}
+
+.tableTitle {
+  padding: 28px 0 34px 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.list {
+  width: 1700px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-bottom: 28px;
+}
+.list .table {
+  margin: 0 auto;
+  border: 1px solid #d7dade;
+  width: 1624px;
+  color: #0d0d0d;
+}
+.table thead tr {
+  background-color: #eff2f7;
+}
+.list .table th {
+  padding: 19px 0;
+}
+
+.list .table td {
+  padding: 10px 0.5rem 0 0.5rem;
+}
+
+.list .table th,
+.table td {
+  text-align: center;
+  font-size: 15px;
+  color: #0d0d0d;
+  font-weight: 400;
+  border: 1px solid #d7dade;
+}
+
+.list .table tr.tableLine {
+  background-color: #fbfbfb;
+}
+.list .table tr.tableLine td {
+  padding: 20px 42px;
+}
+.table td.listNum {
+  line-height: 120px;
+}
+
+.table td.left {
+  text-align: left;
+  padding-left: 20px;
+}
+.table .form-check {
+  display: inline-block;
+}
+.table .form-check-input[type="checkbox"] {
+  width: 48px;
+  height: 22px;
+}
+.table .form-check-input:checked {
+  border: none;
+  background-color: #00c109;
+}
+
+.tableText {
+  display: flex;
+  align-items: flex-end;
+}
+
+.tableText textarea {
+  width: 93%;
+  margin-right: 24px;
+}
+
+.listTitle {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-align: left;
+}
+.list-group-horizontal {
+  font-size: 15px;
+}
+
+.list-group-horizontal:first-of-type {
+  border-top: 1px solid #d7dade;
+  border-radius: 0;
+}
+
+.tableHeader li {
+  padding: 15px 0;
+  background-color: #eee;
+  color: #0d0d0d;
+}
+
+.tableList ul.list-group li.list-group-item {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #d7dade;
+  border-right: 1px solid #d7dade;
+  color: #0d0d0d;
+}
+
+.tableList ul.list-group li.list-group-item:first-child,
+.tableList ul.list-group li.list-group-item:last-child {
+  width: 35%;
+}
+
+.tableList ul.list-group li.list-group-item:nth-child(2) {
+  width: 12%;
+}
+.tableList ul.list-group li.list-group-item:nth-child(3) {
+  width: 18%;
+}
+.tableList ul.list-group li.list-group-item.date {
+  text-align: left;
+  padding-left: 60px;
+}
+
+.tableList ul.list-group li.list-group-item:first-child {
+  border-left: 1px solid #d7dade;
+  border-radius: 0;
+}
+
+.tableList ul.list-group li.list-group-item:last-child {
+  border-radius: 0;
+}
+textarea {
+  resize: none;
+  height: 65px;
+  background-color: #f9f9f9;
+  color: #858585;
+  font-size: 14px;
+  border: 1px solid #e2e2e2;
+  width: 100%;
+}
+.subHeader .form-check-input:checked,
+.form .form-check-input:checked {
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-top: 0;
+}
+
+.subHeader .form-check-input:checked[type="checkbox"],
+.form .form-check-input:checked[type="checkbox"] {
+  background-image: url("../img/free-icon-checkmark-656971.png");
+}

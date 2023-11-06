@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css.map" />
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js.map"></script>
+    <title>알람 모니터링</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="container">
+        <header>
+          <div class="headerInner">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"
+                  ><img src="img/icmonitoring24.png" alt="icmonitoring24" />
+                  <span>알람모니터링</span
+                  ><img src="img/icarrow50.png" alt="arrow"
+                /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><img
+                    src="
+                  img/ichomealarm30.png"
+                    alt="" /><span>알람설정 및 이력</span
+                  ><img src="img/icarrow50.png" alt="arrow"
+                /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><img src="img/icadministrator24.png" alt="" /><span
+                    >BLOCK 분석</span
+                  ><img src="img/icarrow50.png" alt="arrow"
+                /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><img src="img/icsetting48.png" alt="" /><span>기본설정</span
+                  ><img src="img/icarrow50.png" alt="arrow"
+                /></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><img src="img/icshipment60.png" alt="" /><span
+                    >시스템관리</span
+                  ><img src="img/icarrow50.png" alt="arrow"
+                /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><img src="img/icdataquality30.png" alt="" /><span
+                    >서비스데몬</span
+                  ><img src="img/icarrow50.png" alt="arrow"
+                /></a>
+              </li>
+            </ul>
+            <div class="profile">
+              <div>
+                <img src="img/icuser30.png" alt="user" />
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="subHeader">
+          <p class="settingTitle">알람설정</p>
+          <div>
+            <p>최종측정시각 DCS/17:14:58</p>
+            <input class="form-check-input" type="checkbox" value="" checked />
+          </div>
+          <div>
+            <p>ALARM 체크시간</p>
+            <p class="unit"><span class="num">30</span>초</p>
+          </div>
+          <div>
+            <p>DCS</p>
+            <input type="checkbox" class="form-check-input" checked />
+          </div>
+          <div>
+            <p>다음 ALARM</p>
+            <p class="unit"><span class="num">30</span>분</p>
+            <input class="form-check-input" type="checkbox" value="" checked />
+          </div>
+        </div>
+        <div id="content" class="content">
+          <div class="titleBox">
+            <p class="title">현알람목록</p>
+            <select name="" id="" class="form-select form-select-sm selectBox">
+              <option value="">지원-25</option>
+            </select>
+          </div>
+          <div class="form">
+            <div>
+              <p>시스템 구분 선택</p>
+              <select name="" id="" class="form-select form-select-sm system">
+                <option value="">전체</option>
+              </select>
+            </div>
+            <div>
+              <p>태그 선택</p>
+              <select name="" id="" class="form-select form-select-sm">
+                <option value="">전체</option>
+              </select>
+            </div>
+            <div>
+              <p>구분</p>
+              <select name="" id="" class="form-select form-select-sm">
+                <option value="">전체</option>
+              </select>
+            </div>
+            <div>
+              <p class="alarmDate">알람 발생일</p>
+              <input type="text" value="2023-05-11 12:31" /><span>-</span
+              ><input value="2023-05-11 12:31" type="text" />
+            </div>
+            <div>
+              <p class="divide">조치사항 있음</p>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                checked
+              />
+            </div>
+            <div class="btnWrap">
+              <button type="button" class="btn  btn-primary btn-sm btnSearch">
+                <img src="img/icsearch.png" alt="" />검색
+              </button>
+              <button type="button" class="btn  btn-primary btn-sm btnDown">
+                <img src="img/icexcel24.png" alt="" />다운로드
+              </button>
+            </div>
+          </div>
+          <div class="list">
+            <p class="tableTitle">알람이력 및 조치사항</p>
+            <colgroup>
+              <col width="95px" />
+
+              <col width="156px" />
+
+              <col width="226px" />
+
+              <col width="172px" />
+              <col width="156px" />
+              <col width="220px" />
+              <col width="215px" />
+              <col width="388px" />
+            </colgroup>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">태그구분</th>
+                  <th scope="col">태그이름</th>
+                  <th scope="col">알람구분</th>
+                  <th scope="col">알람상태</th>
+                  <th scope="col">알람시작시각</th>
+                  <th scope="col">알람사용유무</th>
+                  <th scope="col">알람설정값</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" class="listNum">155</td>
+                  <td>DCS시설관리</td>
+                  <td>진월택지배수지 유입유량</td>
+                  <td>HOLDING알람</td>
+                  <td>주의단계</td>
+                  <td>2023-05-08 17:09:37</td>
+                  <td>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                      <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                    </div>
+                    </label>
+                  </td>
+                  <td class="left">50분초과</td>
+                </tr>
+                <tr>
+                  <td colspan="7">
+                    <div class="tableText">
+                      <textarea
+                        name=""
+                        id=""
+                        cols="30"
+                        rows="10"
+                        placeholder="주석내용"
+                      ></textarea>
+                      <button type="button" class="btn btn-primary btn-sm btnSave">
+                        <img src="img/icdone.png" alt="" />저장
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="tableLine">
+                  <td colspan="8">
+                    <div>
+                      <p class="listTitle">DSC 측정값</p>
+                      <div class="tableList">
+                        <ul
+                          class="list-group list-group-horizontal tableHeader"
+                        >
+                          <li class="list-group-item">측정시각</li>
+                          <li class="list-group-item">값</li>
+                          <li class="list-group-item">반환값</li>
+                          <li class="list-group-item">수집시각</li>
+                        </ul>
+
+                        <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item date">
+                            2023-05-08 17:09:37
+                          </li>
+                          <li class="list-group-item">1.9000</li>
+                          <li class="list-group-item">1.9</li>
+                          <li class="list-group-item">2023-05-08 17:09:37</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item date">
+                            2023-05-08 17:09:37
+                          </li>
+                          <li class="list-group-item">1.9000</li>
+                          <li class="list-group-item">1.9</li>
+                          <li class="list-group-item">2023-05-08 17:09:37</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item date">
+                            2023-05-08 17:09:37
+                          </li>
+                          <li class="list-group-item">1.9000</li>
+                          <li class="list-group-item">1.9</li>
+                          <li class="list-group-item">2023-05-08 17:09:37</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item date">
+                            2023-05-08 17:09:37
+                          </li>
+                          <li class="list-group-item">1.9000</li>
+                          <li class="list-group-item">1.9</li>
+                          <li class="list-group-item">2023-05-08 17:09:37</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item date">
+                            2023-05-08 17:09:37
+                          </li>
+                          <li class="list-group-item">1.9000</li>
+                          <li class="list-group-item">1.9</li>
+                          <li class="list-group-item">2023-05-08 17:09:37</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item date">
+                            2023-05-08 17:09:37
+                          </li>
+                          <li class="list-group-item">1.9000</li>
+                          <li class="list-group-item">1.9</li>
+                          <li class="list-group-item">2023-05-08 17:09:37</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item date">
+                            2023-05-08 17:09:37
+                          </li>
+                          <li class="list-group-item">1.9000</li>
+                          <li class="list-group-item">1.9</li>
+                          <li class="list-group-item">2023-05-08 17:09:37</li>
+                        </ul>
+                        <ul class="list-group list-group-horizontal">
+                          <li class="list-group-item date">
+                            2023-05-08 17:09:37
+                          </li>
+                          <li class="list-group-item">1.9000</li>
+                          <li class="list-group-item">1.9</li>
+                          <li class="list-group-item">2023-05-08 17:09:37</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="2" class="listNum">154</td>
+                  <td>DCS시설관리</td>
+                  <td>진월택지배수지 유입유량</td>
+                  <td>HOLDING알람</td>
+                  <td>주의단계</td>
+                  <td>2023-05-08 17:09:37</td>
+                  <td></td>
+                  <td class="left">50분초과</td>
+                </tr>
+                <tr>
+                  <td colspan="7">
+                    <div class="tableText">
+                      <textarea
+                        name=""
+                        id=""
+                        cols="30"
+                        rows="10"
+                        placeholder="주석내용"
+                      ></textarea>
+                      <button type="button" class="btn btn-primary btn-sm  btnSave">
+                        <img src="img/icdone.png" alt="" />저장
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
